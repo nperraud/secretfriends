@@ -1,6 +1,36 @@
 # Secret Santa
 
-Check it live on [nperraud.github.io/secretsanta/](http://nperraud.github.io/secretfriends/).
+Check it live on [nperraud.github.io/secretfriends/](http://nperraud.github.io/secretfriends/).
+
+## Friend lists
+
+#### Maechler
+
+Esther !Roman
+Roman !Esther
+Helen !Sandro
+Sandro !Helen
+Milena !Nathanaël
+Nathanaël !Milena
+
+#### Perraudin
+
+Tounet !Edwige
+Edwige !Tounet
+Jérémie !Isabelle
+Isabelle !Jérémie
+Nathanaël !Milena
+Milena !Nathanaël
+Camille !Raphaël
+Raphaël !Camille
+Clotilde !David
+David !Clotilde
+Tizita !Michaël
+Michaël !Tizita
+Emeline !Cyril
+Cyril !Emeline
+Théo
+Tom
 
 ## License (MIT)
 
