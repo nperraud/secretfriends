@@ -5,16 +5,18 @@ Check it live on [nperraud.github.io/secretfriends/](http://nperraud.github.io/s
 ## Friend lists
 
 #### Maechler
-
+```
 Esther !Roman
 Roman !Esther
 Helen !Sandro
 Sandro !Helen
 Milena !Nathanaël
 Nathanaël !Milena
+```
 
 #### Perraudin
 
+```
 Tounet !Edwige
 Edwige !Tounet
 Jérémie !Isabelle
@@ -31,6 +33,7 @@ Emeline !Cyril
 Cyril !Emeline
 Théo
 Tom
+```
 
 ## License (MIT)
 
