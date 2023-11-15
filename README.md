@@ -16,24 +16,6 @@ Nathanaël !Milena
 
 #### Perraudin
 
-```
-Tounet !Edwige
-Edwige !Tounet
-Jérémie !Isabelle
-Isabelle !Jérémie
-Nathanaël !Milena
-Milena !Nathanaël
-Camille !Raphaël
-Raphaël !Camille
-Clotilde !David
-David !Clotilde
-Tizita !Michaël
-Michaël !Tizita
-Emeline !Cyril
-Cyril !Emeline
-Théo
-Tom
-```
 
 ```
 Tounet !Edwige
@@ -52,6 +34,25 @@ Théo
 Tom  !Virginie
 Virginie ! Tom
 ```
+
+
+```
+Tounet !Edwige
+Edwige !Tounet
+Jérémie !Isabelle
+Isabelle !Jérémie
+Nathanaël !Milena
+Milena !Nathanaël
+Camille !Raphaël
+Raphaël !Camille
+Clotilde !David
+David !Clotilde
+Emeline
+Théo
+Tom  !Virginie
+Virginie ! Tom
+```
+
 
 ## License (MIT)
 
