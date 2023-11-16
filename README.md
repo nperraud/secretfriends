@@ -53,6 +53,19 @@ Tom  !Virginie
 Virginie ! Tom
 ```
 
+#### Coquoz
+```
+Jérôme !Catherine
+Catherine !Jérôme
+Camille !Raphaël
+Raphaël !Camille
+Nicolas !Samara
+Samara !Nicolas
+Florence !Bryan
+Bryan !Florence
+Gudrun
+```
+
 
 ## License (MIT)
 
