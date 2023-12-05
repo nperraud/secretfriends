@@ -66,6 +66,18 @@ Bryan !Florence
 Gudrun
 ```
 
+#### Jolien
+```
+Chantal !Yannick
+Yannick !Chantal
+Lise
+Romain !Olivia
+Olivia !Romain
+Véronique !Yoann
+Yoann !Véronique
+Clotilde !David
+David !Clotilde
+```
 
 ## License (MIT)
 
