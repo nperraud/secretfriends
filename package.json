@@ -1,0 +1,30 @@
+{
+  "name": "secretfriends",
+  "version": "1.0.0",
+  "description": "Secret Santa Generator",
+  "main": "SecretSanta.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "secret-santa",
+    "pairing"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/__tests__/**/*.js",
+      "**/?(*.)+(spec|test).js"
+    ]
+  }
+}
+
