@@ -8,6 +8,7 @@
 
         <script src="vendors/Lodash-3.10.1.js"></script>
         <script src="vendors/Cryptojs.aes-3.1.2.js"></script>
+        <script src="./translations.js"></script>
 
         <style>
 
@@ -123,6 +124,28 @@
                 margin-top: 40px;
             }
 
+            .language-selector {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                z-index: 1000;
+            }
+
+            .language-selector select {
+                padding: 8px 12px;
+                border: 3px solid #0CB50C;
+                border-radius: 5px;
+                background-color: rgba(255, 255, 255, .9);
+                font-family: 'Comic Sans MS';
+                font-size: 14px;
+                cursor: pointer;
+                outline: none;
+            }
+
+            .language-selector select:hover {
+                border-color: #E6E020;
+            }
+
         </style>
 
         <script>
@@ -132,9 +155,31 @@
                 .compact().object().value();
 
             var name = queryString.name;
+            var lang = queryString.lang || getCurrentLanguage();
 
             var pairing = CryptoJS.AES.decrypt( queryString.pairing, queryString.key ).toString(CryptoJS.enc.Utf8);
             var pairingDefinition = pairing.match( /^([^(]+)(?: (\([^)]+\)))?$/ );
+
+            var currentLang = lang;
+
+            function updateLanguage(lang) {
+                currentLang = lang;
+                setCurrentLanguage(lang);
+                
+                // Update page title
+                var titleText = translate('pairingTitle', currentLang, { name: name });
+                document.title = 'Secret Santa Pairing';
+                
+                // Update UI elements
+                document.getElementById('pairing-title-text').textContent = titleText;
+                document.getElementById('pairing-goodluck-text').textContent = translate('pairingGoodLuck', currentLang);
+                document.getElementById('pairing-footer-text').textContent = translate('pairingFooter', currentLang);
+                
+                // Update language selector
+                if (document.getElementById('language-selector')) {
+                    document.getElementById('language-selector').value = currentLang;
+                }
+            }
 
         </script>
 
@@ -142,12 +187,20 @@
 
     <body>
 
+        <div class="language-selector">
+            <select id="language-selector">
+                <option value="en">English</option>
+                <option value="fr">Français</option>
+                <option value="de">Deutsch</option>
+            </select>
+        </div>
+
         <div class="main">
 
             <div class="wrapper">
                 <div class="content">
 
-                    <div class="title">Hi <span id="name"></span>! You've been paired with</div>
+                    <div class="title" id="pairing-title-text">Hi <span id="name"></span>! You've been paired with</div>
                     <script>document.getElementById('name').innerText = name</script>
 
                     <div class="pairing">
@@ -164,7 +217,7 @@
                         </script>
                     </div>
 
-                    <div class="title">Good luck!</div>
+                    <div class="title" id="pairing-goodluck-text">Good luck!</div>
 
                     <script>
                         if (queryString.extra) {
@@ -175,11 +228,21 @@
                 </div>
             </div>
 
-            <a href="http://arcanis.github.io/secretsanta/" class="spirit-of-christmas">
+            <a href="./index.html" class="spirit-of-christmas" id="pairing-footer-text">
                 Want to start your own Secret Santa with your friends? Click here to get started!
             </a>
 
         </div>
+
+        <script>
+            // Initialize language
+            updateLanguage(currentLang);
+            
+            // Language selector change handler
+            document.getElementById('language-selector').addEventListener('change', function(e) {
+                updateLanguage(e.target.value);
+            });
+        </script>
 
     </body>
 

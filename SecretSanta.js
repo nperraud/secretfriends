@@ -1,3 +1,6 @@
+// Support both Node.js and browser environments
+var _ = typeof require !== 'undefined' ? require('lodash') : (typeof window !== 'undefined' ? window._ : null);
+
 var SecretSanta = function () {
 
     this.names = [];
@@ -109,3 +112,8 @@ SecretSanta.prototype.generate = function () {
     return pairings;
 
 };
+
+// Export for Node.js
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = SecretSanta;
+}

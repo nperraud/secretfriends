@@ -2,6 +2,19 @@
 
 Check it live on [nperraud.github.io/secretfriends/](http://nperraud.github.io/secretfriends/).
 
+
+## Dev quick start
+
+To preview the website, use:
+```bash
+    python3 -m http.server 8001
+```
+
+To run tests, use:
+```bash
+npm test
+```
+
 ## Friend lists
 
 #### Maechler
